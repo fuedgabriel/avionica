@@ -308,9 +308,7 @@ void loop() {
                     abrirMain();
 
                 }
-
             }
-            
         }
-
     }
+}
