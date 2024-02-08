@@ -314,33 +314,3 @@ void loop() {
         }
 
     }
-
-    if (altitude >= 3000)
-    {
-
-        // Abrir o drogue chute
-        abrirDrogue();
-    }
-    else if (altitude >= 410)
-    {
-
-        // Abrir o paraquedas principal
-        abrirParaquedasPrincipal();
-    }
-
-    delay(1000); // Aguarda 1 segundo entre leituras
-}
-
-void abrirDrogue()
-{
-
-    // Lógica para abrir o drogue chute
-    Serial.println("Abrindo Drogue Chute!");
-}
-
-void abrirParaquedasPrincipal()
-{
-
-    // Lógica para abrir o paraquedas principal
-    Serial.println("Abrindo Paraquedas Principal!");
-}
