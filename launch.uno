@@ -278,7 +278,7 @@ void loop() {
 
         while (true) {
             
-            if (apogeu >= 409 && apogeu <= 230) { //A altura do apogeu ocorre no intervalo fechado de 409m e 230m?
+            if (apogeu >= 415 && apogeu <= 230) { //A altura do apogeu ocorre no intervalo fechado de 409m e 230m?
 
                 abrirDrogue();
 
