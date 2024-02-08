@@ -297,7 +297,7 @@ void loop() {
 
             } else if (apogeu <= 40) { // A altura do apogeu ocorre igual ou abaixo de 40m?
 
-                altitude = stlogger.readAltitude(); // o apogeu n abre
+                altitude = stlogger.readAltitude(); // o apogeu não abre
 
             } else {
 
