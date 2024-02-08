@@ -3,7 +3,7 @@
 
 <img src="/images/Rockets.png" height=300 width=300>
 
-<a href=“https://drive.google.com/file/d/1tDXVDjDDsP1ugs411ItCSu7pxn-BVING/view?usp=drive_link“>Baixe o nosso projeto no altium</a>
+<a href="https://drive.google.com/file/d/1tDXVDjDDsP1ugs411ItCSu7pxn-BVING/view?usp=drive_link">Baixe o nosso projeto no altium</a>
 
 
 ## 🎇Esquemático
