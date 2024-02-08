@@ -18,19 +18,6 @@
 #define slogger 34 // altímetro (pino com valor fictício)
 
 
-/*
-
-BMP390 – altímetro, entradas 30 e 31
-BMP388 – altímetro, entradas 28 e 29
-MPL3115A2-I2C – altímetro, entradas 26 e 27
-StratoLogger – altímetro
-GY-NEO6MV2 – entradas 20 e 21 ------------
-UBBL24-FL-TH -
-SX1278 LoRA UART -
-bq24074 - radiofrequencia LoRa, entradas 32 e 33
-
- */
-
 // Tabela de erros
 //  0 - Sem erro
 //  1 - erro no giroscopio e acelerometro
@@ -52,46 +39,58 @@ bq24074 - radiofrequencia LoRa, entradas 32 e 33
 
 
 // Função para emitir um bip
-void beep(int quantidade, int tempo ) {
+void beep(int quantidade) {
 
     for (int i = 0; i < quantidade; i++) {
 
-        // tone(32, 330, 1);
-        // delay(tempo);
-        // noTone(32);
-        pinmode(1, OUTPUT);
-        
-
+        tone(15, 330, 1000); // Emite um bip 
+        delay(1);
+        noTone(15); 
     }
+    
 
 }
 
 
 setup() {
-
-    try {
+    
+    pinmode(15, OUTPUT);
+    
+    try { // tentativa, caso não funcione saberemos por aviso
 
         LoRa.init(); // Inicializa a comunicação e obtem todos os parâmetros do módulo
 
         // LoRa.Reset();                                       // Reseta parâmetros para os de fábrica
-        LoRa.SetAirDataRate(ADR_1K);    // Estabelece a taxa de dados de transmissão
-        LoRa.SetAddress(1);             // Estabelece o endereço da rede
-        LoRa.SetChannel(23);            // Estabelece canal como 23
-        LoRa.SaveParameters(TEMPORARY); // Salva todas as definições de forma temporária
-
+        // LoRa.SetAirDataRate(ADR_1K);    // Estabelece a taxa de dados de transmissão
+        // LoRa.SetAddress(1);             // Estabelece o endereço da rede
+        // LoRa.SetChannel(23);            // Estabelece canal como 23
+        // LoRa.SaveParameters(PERMANENTE); // Salva todas as definições de forma temporária
         LoRa.PrintParameters(); // Imprime todos os parâmetros (configurações) obtidos do módulo
         LoRa.SetMode(MODE_NORMAL);
-
+        
     }
 
     catch (const std::exception &e) {
-        
-        std::cerr << e.what("Modulo lora não funciona") << '\n';
-        return 0;
-
+        beep(8); // avisa o erro
     }
     
 }
 
-void loop() {
+void tom(char pino, int freq, int per); // pino frequência e período
+
+void setup() {
+
+    pinMode(20, OUTPUT);
+
 }
+
+void loop() {
+
+    delay(1000);
+    int tempo = 400;
+    tone();
+    
+}
+ 
+
+    
