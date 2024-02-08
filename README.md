@@ -1,7 +1,7 @@
 # 🚀 **Bem vindo ao código da aviônica** 🚀
 # Rockets  | `Aviônica`
 
-<img src="/images/Rockets.png" height=300 width=300>
+<img src="/images/Rockets.png" height=300 width=300 href="https://drive.google.com/file/d/1tDXVDjDDsP1ugs411ItCSu7pxn-BVING/view?usp=drive_link">
 
 <a href="https://drive.google.com/file/d/1tDXVDjDDsP1ugs411ItCSu7pxn-BVING/view?usp=drive_link">Baixe o nosso projeto no altium</a>
 
